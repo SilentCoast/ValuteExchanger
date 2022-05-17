@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/MainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/Покупка_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFinalCharCode"
+        style="@style/MainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+
+
+        app:layout_constraintStart_toEndOf="@+id/txtFinal"
+        app:layout_constraintTop_toTopOf="@+id/txtFinal" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/MainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+
+
+        android:text="(RUB)"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCurrent"
+        app:layout_constraintStart_toEndOf="@+id/txtCurrent"
+        app:layout_constraintTop_toTopOf="@+id/txtCurrent" />
+
+    <TextView
+        android:id="@+id/txtCurrentValuteName"
+        style="@style/MainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+
+
+        android:text="@string/Валюта_для_обмена_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listValutes" />
+
+    <TextView
+        android:id="@+id/txtFinal"
+        style="@style/MainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrent" />
+
+    <ListView
+        android:id="@+id/listValutes"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" >
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/txtCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:hint="Кол-во для обмена"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        android:maxLength="8"
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrentValuteName" />
+
+    <Button
+        android:id="@+id/btnExchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#00C853"
+        android:text="Обменять"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/txtCurrent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <TextView
+        android:id="@+id/textViewCharCode"
+        style="@style/MainStyle"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="USD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNominal"
+        style="@style/MainStyle"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:text="100"
+        app:layout_constraintStart_toStartOf="@+id/textViewCharCode"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCharCode" />
+
+    <TextView
+        android:id="@+id/textViewValue"
+        style="@style/MainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="200dp"
+        android:text="74.5464"
+        app:layout_constraintStart_toEndOf="@+id/textViewCharCode"
+        app:layout_constraintTop_toTopOf="@+id/textViewCharCode" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        style="@style/MainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="15dp"
+        android:text="Южноафриканских рэндов"
+        app:layout_constraintStart_toEndOf="@+id/textViewNominal"
+        app:layout_constraintTop_toTopOf="@+id/textViewNominal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
